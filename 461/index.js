@@ -49,4 +49,6 @@ var pad = function(str, length) {
   }
 };
 
-module.exports = hammingDistance;
+if (module) {
+  module.exports = hammingDistance;
+}

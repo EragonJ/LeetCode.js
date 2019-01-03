@@ -46,4 +46,6 @@ var pad = function(str, length) {
   }
 };
 
-module.exports = findComplement;
+if (module) {
+  module.exports = findComplement;
+}

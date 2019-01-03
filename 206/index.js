@@ -27,4 +27,6 @@ var reverseList = function(head) {
   return nodes[0];
 };
 
-module.exports = reverseList;
+if (module) {
+  module.exports = reverseList;
+}

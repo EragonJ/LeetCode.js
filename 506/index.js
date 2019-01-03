@@ -36,4 +36,6 @@ var findRelativeRanks = function(nums) {
   return result;
 };
 
-module.exports = findRelativeRanks;
+if (module) {
+  module.exports = findRelativeRanks;
+}

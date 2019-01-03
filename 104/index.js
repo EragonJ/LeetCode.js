@@ -35,4 +35,6 @@ var maxDepth = function(root) {
   return getDepth(root, 1);
 };
 
-module.exports = maxDepth;
+if (module) {
+  module.exports = maxDepth;
+}

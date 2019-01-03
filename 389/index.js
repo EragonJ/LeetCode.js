@@ -16,4 +16,6 @@ var findTheDifference = function(s, t) {
   return t[0];
 };
 
-module.exports = findTheDifference;
+if (module) {
+  module.exports = findTheDifference;
+}

@@ -29,4 +29,6 @@ var reverse = function(x) {
   return 0;
 };
 
-module.exports = reverse;
+if (module) {
+  module.exports = reverse;
+}

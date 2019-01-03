@@ -11,4 +11,6 @@ var reverseWords = function(s) {
   return newChunks.join(' ');
 };
 
-module.exports = reverseWords;
+if (module) {
+  module.exports = reverseWords;
+}

@@ -28,4 +28,6 @@ var constructRectangle = function(area) {
   return found;
 };
 
-module.exports = constructRectangle;
+if (module) {
+  module.exports = constructRectangle;
+}

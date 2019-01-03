@@ -19,4 +19,6 @@ var findDisappearedNumbers = function(nums) {
   return result;
 };
 
-module.exports = findDisappearedNumbers;
+if (module) {
+  module.exports = findDisappearedNumbers;
+}

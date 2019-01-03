@@ -20,4 +20,6 @@ var findMaxConsecutiveOnes = function(nums) {
   return lastMax;
 };
 
-module.exports = findMaxConsecutiveOnes;
+if (module) {
+  module.exports = findMaxConsecutiveOnes;
+}

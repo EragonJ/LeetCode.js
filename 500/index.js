@@ -22,4 +22,6 @@ var compare = function(word, regex) {
   return false;
 }
 
-module.exports = findWords;
+if (module) {
+  module.exports = findWords;
+}

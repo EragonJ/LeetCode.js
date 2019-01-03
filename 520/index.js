@@ -9,4 +9,6 @@ var detectCapitalUse = function(word) {
   return !!(word.match(patternB) || word.match(patternA) || word.match(patternC));
 };
 
-module.exports = detectCapitalUse;
+if (module) {
+  module.exports = detectCapitalUse;
+}

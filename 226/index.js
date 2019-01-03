@@ -32,4 +32,6 @@ var invertTree = function(root) {
   return root;
 };
 
-module.exports = invertTree;
+if (module) {
+  module.exports = invertTree;
+}
