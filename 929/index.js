@@ -3,23 +3,23 @@
  * @return {number}
  */
 var numUniqueEmails = function(emails) {
-    var hash = {};
+  var hash = {};
+  
+  emails.forEach(function(email) {
+    var pair = email.split('@');
+    var localName = pair[0];
+    var domainName = pair[1];
     
-    emails.forEach(function(email) {
-        var pair = email.split('@');
-        var localName = pair[0];
-        var domainName = pair[1];
-        
-        // only use the first part before the first '+'
-        localName = localName.split('+')[0];
-        
-        // ignore each '.' to get unique localName
-        localName = localName.replace(/\./g, '');
-        
-        hash[localName + domainName] = true;
-    });
+    // only use the first part before the first '+'
+    localName = localName.split('+')[0];
     
-    return Object.keys(hash).length;  
+    // ignore each '.' to get unique localName
+    localName = localName.replace(/\./g, '');
+    
+    hash[localName + domainName] = true;
+  });
+  
+  return Object.keys(hash).length;  
 };
 
 if (module) {

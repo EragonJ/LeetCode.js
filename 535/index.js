@@ -8,11 +8,11 @@ var table = {};
  * @return {string}
  */
 var encode = function(longUrl) {
-    var id = getRandomId();
-    var result = PREFIX + id;
-    table[result] = longUrl;
-    
-    return result;
+  var id = getRandomId();
+  var result = PREFIX + id;
+  table[result] = longUrl;
+  
+  return result;
 };
 
 /**
@@ -22,7 +22,7 @@ var encode = function(longUrl) {
  * @return {string}
  */
 var decode = function(shortUrl) {
-    return table[shortUrl];
+  return table[shortUrl];
 };
 
 /**
@@ -31,14 +31,14 @@ var decode = function(shortUrl) {
  */
 
 var getRandomId = function() {
-    var id = '';
-    var compositions = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    
-    for (var i = 0; i <= 10; i++) {
-        id += compositions[Math.random() * compositions.length];
-    }
-    
-    return id;
+  var id = '';
+  var compositions = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  
+  for (var i = 0; i <= 10; i++) {
+      id += compositions[Math.random() * compositions.length];
+  }
+  
+  return id;
 };
 
 if (module) {

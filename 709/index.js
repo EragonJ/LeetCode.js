@@ -3,7 +3,7 @@
  * @return {string}
  */
 var toLowerCase = function(str) {
-    return str.toLowerCase();
+  return str.toLowerCase();
 };
 
 if (module) {
