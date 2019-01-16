@@ -1,4 +1,4 @@
-/**
+i/**
  * Definition for a binary tree node.
  * function TreeNode(val) {
  *     this.val = val;
@@ -12,23 +12,18 @@
  */
 var searchBST = function(root, val) {
   if (root === null) {
-    return;
+    return null;
   }
   else if (root.val === val) {
     return root;
   }
   else {
-    var left = searchBST(root.left, val);
-    if (left) {
-      return left;
+    if (root.val < val) {
+      return searchBST(root.right, val);
     }
-    
-    var right = searchBST(root.right, val);
-    if (right) {
-      return right;
+    else {
+      return searchBST(root.left, val);
     }
-    
-    return null;
   }
 };
 
