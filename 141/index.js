@@ -11,12 +11,13 @@
  * @return {boolean}
  */
 var hasCycle = function(head) {
+  var map = new Map();
   while (head) {
-    if (head._isTraversed) {
+    if (map.has(head)) {
       return true;
     }
     else {
-      head._isTraversed = true;
+      map.set(head, true);
       head = head.next;
     }
   }
